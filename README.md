@@ -1,13 +1,13 @@
 # Öğrenci Not Sistemi (Clean Architecture & CQRS)
 
-Bu proje, modern yazılım mimarisi prensipleri kullanılarak geliştirilmiş kapsamlı bir **Öğrenci Not Sistemi API**'sidir. Proje, sürdürülebilirlik, test edilebilirlik ve esneklik odaklı **Clean Architecture** (Temiz Mimari) üzerine inşa edilmiştir.
+Bu proje, modern yazılım mimarisi prensipleri kullanılarak geliştirilmiş kapsamlı bir **Öğrenci Not Sistemi API**'sidir. Proje, sürdürülebilirlik, test edilebilirlik ve esneklik odaklı **Clean Architecture** üzerine inşa edilmiştir.
 
 ## 🚀 Teknolojiler ve Yaklaşımlar
 
-- **.NET 8 / Core**: En güncel web framework sürümü.
+- **.NET 10**: En güncel web framework sürümü.
 - **Clean Architecture**: Katmanlı mimari (Domain, Application, Infrastructure, Presentation).
 - **CQRS (MediatR)**: Komut ve sorguların ayrıştırılması.
-- **Entity Framework Core**: Veritabanı yönetim katmanı.
+- **Entity Framework**: Veritabanı yönetim katmanı.
 - **PostgreSQL**: İlişkisel veritabanı tercihi.
 - **JWT (JSON Web Token)**: Rol tabanlı güvenli kimlik doğrulama.
 - **AutoMapper**: Nesneler arası otomatik eşleme (Mapping).
@@ -43,9 +43,17 @@ Sistemde **Admin**, **Öğretmen** ve **Öğrenci** olmak üzere üç farklı ro
 
 Şifreleri veritabanında güvenli bir şekilde saklamak için **BCrypt** algoritması kullanılmıştır.
 
+## Öne Çıkan Özellikler
+
+- **JWT & Role-Based Auth**: Sistemde Admin, Öğretmen ve Öğrenci rolleri tanımlıdır. Her rol sadece kendi yetkisi dahilindeki alanlara (Swagger'da asma kilit ile görünen alanlar) erişebilir.
+- **PostgreSQL Entegrasyonu**: Performanslı ve açık kaynak bir veritabanı tercihi yapılmıştır.
+- **Automatic Seeding**: Uygulama ilk ayağa kalktığında DbSeeder sınıfı sayesinde varsayılan Admin kullanıcısı (admin / admin123) ve örnek veriler otomatik olarak oluşturulur.
+- **Swagger UI**: API'nin tüm uç noktalarını (Endpoints) test edebileceğiniz, JWT token yapıştırabileceğiniz interaktif bir dökümantasyon sayfası sunar.
+
+
 ## ⚙️ Kurulum ve Çalıştırma
 
-1.  Bilgisayarınızda .NET SDK (8.0+) yüklü olduğundan emin olun.
+1.  Bilgisayarınızda .NET 10 yüklü olduğundan emin olun.
 2.  Kök dizindeki `appsettings.json` dosyasındaki `DefaultConnection` kısmına PostgreSQL bağlantı dizeinizi (Connection String) girin.
 3.  Terminalde Presentation projesinin içine gidin veya root dizinden çalıştırın:
     ```bash
