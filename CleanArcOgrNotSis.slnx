@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CleanArcOgrNotSis.Application/CleanArcOgrNotSis.Application.csproj" />
+  <Project Path="CleanArcOgrNotSis.Domain/CleanArcOgrNotSis.Domain.csproj" />
+  <Project Path="CleanArcOgrNotSis.Infrastructure/CleanArcOgrNotSis.Infrastructure.csproj" />
+  <Project Path="CleanArcOgrNotSis.Presentation/CleanArcOgrNotSis.Presentation.csproj" />
+</Solution>

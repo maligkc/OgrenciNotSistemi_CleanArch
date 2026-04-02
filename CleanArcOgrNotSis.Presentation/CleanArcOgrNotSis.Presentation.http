@@ -1,0 +1,6 @@
+@CleanArcOgrNotSis.Presentation_HostAddress = http://localhost:5126
+
+GET {{CleanArcOgrNotSis.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

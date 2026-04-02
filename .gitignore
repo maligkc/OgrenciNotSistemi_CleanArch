@@ -1,0 +1,39 @@
+## [Ignore built binaries]
+[Bb]in/
+[Oo]bj/
+
+## [Ignore IDE specific files]
+.idea/
+.vsc/
+.vscode/
+*.user
+*.userosscache
+*.sln.docstates
+
+## [Ignore OS specific files]
+.DS_Store
+Thumbs.db
+
+## [Ignore User specific files]
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sublime-project
+*.sublime-workspace
+
+## [Ignore Package Manager files]
+.nuget/
+*.nupkg
+packages/
+
+## [Ignore Logs]
+*.log
+
+## [Ignore local settings]
+appsettings.Development.json
+
+## [Other]
+.DS_Store
+[Tt]emp/
+[Ww]wwroot/lib/

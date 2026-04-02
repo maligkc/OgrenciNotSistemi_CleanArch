@@ -1,0 +1,10 @@
+{
+  "Admins": [
+    {
+      "Ad": "admin",
+      "Soyad": "admin",
+      "Email": "admin@mail.com",
+      "Password": "admin"
+    }
+  ]
+}
