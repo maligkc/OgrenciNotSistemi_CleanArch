@@ -43,12 +43,48 @@ Sistemde **Admin**, **Öğretmen** ve **Öğrenci** olmak üzere üç farklı ro
 
 Şifreleri veritabanında güvenli bir şekilde saklamak için **BCrypt** algoritması kullanılmıştır.
 
-## Öne Çıkan Özellikler
+## 🌟 Öne Çıkan Özellikler
 
 - **JWT & Role-Based Auth**: Sistemde Admin, Öğretmen ve Öğrenci rolleri tanımlıdır. Her rol sadece kendi yetkisi dahilindeki alanlara (Swagger'da asma kilit ile görünen alanlar) erişebilir.
 - **PostgreSQL Entegrasyonu**: Performanslı ve açık kaynak bir veritabanı tercihi yapılmıştır.
 - **Automatic Seeding**: Uygulama ilk ayağa kalktığında DbSeeder sınıfı sayesinde varsayılan Admin kullanıcısı (admin / admin123) ve örnek veriler otomatik olarak oluşturulur.
 - **Swagger UI**: API'nin tüm uç noktalarını (Endpoints) test edebileceğiniz, JWT token yapıştırabileceğiniz interaktif bir dökümantasyon sayfası sunar.
+
+## API Endpointleri
+
+### 🔐 Auth
+- POST /api/auth/kayit → Yeni kullanıcı kaydı
+- POST /api/auth/giris → Kullanıcı girişi (Token üretimi)
+
+### 🎓 Ogrenci
+- GET /api/ogrenci → Tüm öğrencileri listele (Admin, Öğretmen)
+- GET /api/ogrenci/{id} → ID bazlı öğrenci getir (Admin, Öğretmen, Öğrenci)
+- POST /api/ogrenci → Yeni öğrenci ekle (Admin)
+- PUT /api/ogrenci/{id} → Öğrenci güncelle (Admin, Öğretmen)
+- DELETE /api/ogrenci/{id} → Öğrenci sil (Admin)
+
+### 👨‍🏫 Ogretmen
+- GET /api/ogretmen → Tüm öğretmenleri listele (Admin)
+- GET /api/ogretmen/{id} → ID bazlı öğretmen getir (Admin, Öğretmen)
+- POST /api/ogretmen → Yeni öğretmen ekle (Admin)
+- PUT /api/ogretmen/{id} → Öğretmen güncelle (Admin, Öğretmen)
+- DELETE /api/ogretmen/{id} → Öğretmen sil (Admin)
+
+### 📚 Dersler
+- GET /api/dersler → Tüm dersleri listele (Tüm roller)
+- GET /api/dersler/{id} → ID bazlı ders getir (Tüm roller)
+- POST /api/dersler → Yeni ders ekle (Admin, Öğretmen)
+- PUT /api/dersler/{id} → Ders güncelle (Admin, Öğretmen)
+- DELETE /api/dersler/{id} → Ders sil (Admin, Öğretmen)
+
+### 📝 Notlar
+- GET /api/notlar → Tüm notları listele (Admin, Öğretmen)
+- GET /api/notlar/{id} → ID bazlı not getir (Tüm roller)
+- GET /api/notlar/ogrenci/{ogrenciId} → Öğrenciye ait notları getir (Tüm roller)
+- GET /api/notlar/ders/{dersId} → Derse ait notları getir (Admin, Öğretmen)
+- POST /api/notlar → Not girişi yap (Admin, Öğretmen)
+- PUT /api/notlar/{id} → Not güncelle (Admin, Öğretmen)
+- DELETE /api/notlar/{id} → Not sil (Admin, Öğretmen)
 
 
 ## ⚙️ Kurulum ve Çalıştırma
