@@ -102,5 +102,3 @@ Sistemde **Admin**, **Öğretmen** ve **Öğrenci** olmak üzere üç farklı ro
 - Uygulama ilk çalıştığında otomatik olarak **SeedData** oluşturacak şekilde yapılandırılmıştır.
 - Swagger üzerinden işlem yaparken JWT Token kullanmak için "Authorize" butonunu kullanabilirsiniz.
 
----
-*Bu proje, profesyonel bir yazılım geliştirme sürecini simüle etmek amacıyla uçtan uca prensiplere bağlı kalınarak geliştirilmiştir.*
